@@ -7,13 +7,13 @@
   },
   "metadata": {
     "description": "A collection of skills for various libraries",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "clojure-libraries",
-      "description": "Skills for various Clojure libraries including babashka-fs",
-      "version": "1.0.0",
+      "description": "Skills for various Clojure libraries including babashka-fs and clj-kondo",
+      "version": "1.1.0",
       "author": {
         "name": "Hugo Duncan",
         "email": "hugo@hugoduncan.org"
@@ -25,7 +25,7 @@
         "ref": "master"
       },
       "category": "clojure",
-      "tags": ["clojure", "babashka", "filesystem"],
+      "tags": ["clojure", "babashka", "filesystem", "linting", "clj-kondo", "code-quality"],
       "strict": true
     }
   ]

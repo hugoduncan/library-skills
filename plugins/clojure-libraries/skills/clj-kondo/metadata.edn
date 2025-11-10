@@ -1,0 +1,113 @@
+{:skill/name "clj-kondo"
+ :skill/version "1.0.0"
+ :skill/description "Comprehensive guide for using clj-kondo linter, including configuration, built-in linters, and writing custom hooks"
+ :skill/language :clojure
+ :skill/library {:name "clj-kondo/clj-kondo"
+                 :version "2024.11.14"
+                 :url "https://github.com/clj-kondo/clj-kondo"
+                 :license "EPL-1.0"}
+
+ :skill/author "Library Skills Collection"
+ :skill/created "2025-11-10"
+ :skill/updated "2025-11-10"
+
+ :skill/tags [:clojure :linting :code-quality :static-analysis :hooks
+              :custom-linters :ci-cd :ide-integration :code-style]
+
+ :skill/use-cases ["Code linting and quality checks"
+                   "Custom lint rule development"
+                   "CI/CD integration"
+                   "IDE integration"
+                   "Code style enforcement"
+                   "API deprecation warnings"
+                   "Domain-specific linting"
+                   "Team conventions enforcement"]
+
+ :skill/features ["Complete clj-kondo usage guide"
+                  "Configuration management"
+                  "Built-in linters reference"
+                  "Custom hooks development"
+                  "Hook API documentation"
+                  "Testing strategies"
+                  "IDE integration setup"
+                  "CI/CD patterns"
+                  "Performance optimization"]
+
+ :skill/files {:main "SKILL.md"
+               :examples "examples.clj"
+               :readme "README.md"
+               :quick-reference "QUICK_REFERENCE.md"
+               :index "INDEX.md"
+               :metadata "metadata.edn"}
+
+ :skill/related-skills ["clojure.spec"
+                        "eastwood"
+                        "kibit"
+                        "splint"]
+
+ :skill/prerequisites ["Basic Clojure knowledge"
+                       "Understanding of static analysis concepts"
+                       "Familiarity with linting tools"]
+
+ :skill/learning-path [{:step 1
+                        :title "Introduction and Setup"
+                        :file "SKILL.md"
+                        :section "Getting Started"}
+                       {:step 2
+                        :title "Basic Usage"
+                        :file "SKILL.md"
+                        :section "Using clj-kondo"}
+                       {:step 3
+                        :title "Configuration"
+                        :file "SKILL.md"
+                        :section "Configuration"}
+                       {:step 4
+                        :title "Built-in Linters"
+                        :file "SKILL.md"
+                        :section "Built-in Linters"}
+                       {:step 5
+                        :title "Custom Hooks"
+                        :file "SKILL.md"
+                        :section "Custom Hooks"}
+                       {:step 6
+                        :title "Testing and Distribution"
+                        :file "SKILL.md"
+                        :section "Testing Hooks"}]
+
+ :skill/platform-support {:linux true
+                          :macos true
+                          :windows true
+                          :notes "Native binaries available for all platforms"}
+
+ :skill/api-coverage {:basic-linting true
+                      :configuration true
+                      :custom-hooks true
+                      :hook-api true
+                      :testing true
+                      :ide-integration true
+                      :ci-cd true}
+
+ :skill/examples-count 8
+ :skill/recipes-count 10
+
+ :skill/documentation-quality {:completeness 9.5
+                               :clarity 9.5
+                               :examples 9.0
+                               :practical-value 9.5}
+
+ :skill/audience [:developers :devops :quality-engineers :tool-authors]
+
+ :skill/difficulty :beginner-to-advanced
+
+ :skill/estimated-learning-time {:quick-start "15 minutes"
+                                 :basic-proficiency "2-3 hours"
+                                 :advanced-patterns "8-12 hours"}
+
+ :skill/external-resources [{:type :official-docs
+                             :url "https://github.com/clj-kondo/clj-kondo/blob/master/doc/config.md"}
+                            {:type :hooks-docs
+                             :url "https://github.com/clj-kondo/clj-kondo/blob/master/doc/hooks.md"}
+                            {:type :github
+                             :url "https://github.com/clj-kondo/clj-kondo"}
+                            {:type :hook-examples
+                             :url "https://github.com/clj-kondo/clj-kondo/tree/master/examples"}]}
