@@ -1,0 +1,32 @@
+{
+  "name": "library-skills",
+  "owner": {
+    "name": "Hugo Duncan",
+    "email": "hugo@hugoduncan.org",
+    "url": "https://github.com/hugoduncan"
+  },
+  "metadata": {
+    "description": "A collection of skills for various libraries",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "clojure-libraries",
+      "description": "Skills for various Clojure libraries including babashka-fs",
+      "version": "1.0.0",
+      "author": {
+        "name": "Hugo Duncan",
+        "email": "hugo@hugoduncan.org"
+      },
+      "source": {
+        "source": "github",
+        "repo": "hugoduncan/library-skills",
+        "path": "plugins/clojure-libraries",
+        "ref": "master"
+      },
+      "category": "clojure",
+      "tags": ["clojure", "babashka", "filesystem"],
+      "strict": true
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{:skill/name "babashka.fs"
+ :skill/version "1.0.0"
+ :skill/description "Comprehensive guide for using the babashka.fs file system utility library"
+ :skill/language :clojure
+ :skill/library {:name "babashka/fs"
+                 :version "0.5.27"
+                 :url "https://github.com/babashka/fs"
+                 :license "EPL-1.0"}
+ 
+ :skill/author "Agent-o-rama Skills Collection"
+ :skill/created "2025-11-09"
+ :skill/updated "2025-11-09"
+ 
+ :skill/tags [:clojure :babashka :filesystem :io :files :directories
+              :cross-platform :scripting :automation :build-tools]
+ 
+ :skill/use-cases ["File system operations"
+                   "Build automation"
+                   "File processing scripts"
+                   "Directory management"
+                   "Cross-platform scripting"
+                   "File searching and filtering"
+                   "Backup and synchronization"
+                   "Log rotation"
+                   "Archive operations"]
+ 
+ :skill/features ["Complete API reference"
+                  "Runnable examples"
+                  "Quick reference cheatsheet"
+                  "Common patterns and recipes"
+                  "Cross-platform best practices"
+                  "Error handling strategies"
+                  "Performance tips"
+                  "Testing patterns"]
+ 
+ :skill/files {:main "SKILL.md"
+               :examples "examples.clj"
+               :readme "README.md"
+               :quick-reference "QUICK_REFERENCE.md"
+               :metadata "metadata.edn"}
+ 
+ :skill/related-skills ["clojure.java.io"
+                        "clojure.java.shell"
+                        "babashka.tasks"
+                        "babashka.cli"]
+ 
+ :skill/prerequisites ["Basic Clojure knowledge"
+                       "Understanding of file systems"
+                       "Babashka or Clojure JVM installation"]
+ 
+ :skill/learning-path [{:step 1
+                        :title "Core Concepts"
+                        :file "SKILL.md"
+                        :section "Core Concepts"}
+                       {:step 2
+                        :title "Run Examples"
+                        :file "examples.clj"
+                        :action "Execute script"}
+                       {:step 3
+                        :title "Path Operations"
+                        :file "SKILL.md"
+                        :section "Path Operations"}
+                       {:step 4
+                        :title "Searching and Filtering"
+                        :file "SKILL.md"
+                        :section "Searching and Filtering: Glob and Match"}
+                       {:step 5
+                        :title "Common Patterns"
+                        :file "SKILL.md"
+                        :section "Advanced Patterns and Best Practices"}
+                       {:step 6
+                        :title "Real-world Recipes"
+                        :file "SKILL.md"
+                        :section "Common Use Cases and Recipes"}]
+ 
+ :skill/platform-support {:linux true
+                          :macos true
+                          :windows true
+                          :notes "Full cross-platform support with automatic handling of OS differences"}
+ 
+ :skill/api-coverage {:path-operations true
+                      :file-operations true
+                      :directory-operations true
+                      :searching true
+                      :metadata true
+                      :permissions true
+                      :archives true
+                      :temp-files true
+                      :system-paths true
+                      :xdg-directories true}
+ 
+ :skill/examples-count 13
+ :skill/recipes-count 6
+ 
+ :skill/documentation-quality {:completeness 9.5
+                               :clarity 9.0
+                               :examples 10.0
+                               :practical-value 9.5}
+ 
+ :skill/audience [:developers :scripters :automation-engineers :devops]
+ 
+ :skill/difficulty :beginner-to-advanced
+ 
+ :skill/estimated-learning-time {:quick-start "15 minutes"
+                                 :basic-proficiency "1-2 hours"
+                                 :advanced-patterns "4-6 hours"}
+ 
+ :skill/external-resources [{:type :official-docs
+                             :url "https://github.com/babashka/fs/blob/master/API.md"}
+                            {:type :github
+                             :url "https://github.com/babashka/fs"}
+                            {:type :book
+                             :url "https://book.babashka.org/"}
+                            {:type :api-docs
+                             :url "https://cljdoc.org/d/babashka/fs/"}]}

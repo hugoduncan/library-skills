@@ -1,0 +1,11 @@
+{
+  "name": "clojure-libraries",
+  "description": "Skills for various Clojure libraries including babashka-fs",
+  "version": "1.0.0",
+  "author": {
+    "name": "Hugo Duncan",
+    "email": "hugo@hugoduncan.org"
+  },
+  "keywords": ["clojure", "babashka", "filesystem", "babashka-fs"],
+  "license": "EPL-2.0"
+}
