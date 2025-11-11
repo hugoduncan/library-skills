@@ -18,12 +18,7 @@
         "name": "Hugo Duncan",
         "email": "hugo@hugoduncan.org"
       },
-      "source": {
-        "source": "github",
-        "repo": "hugoduncan/library-skills",
-        "path": "plugins/clojure-libraries",
-        "ref": "master"
-      },
+      "source": "./plugins/clojure-libraries",
       "category": "clojure",
       "tags": ["clojure", "babashka", "filesystem", "linting", "clj-kondo", "code-quality"],
       "strict": true
