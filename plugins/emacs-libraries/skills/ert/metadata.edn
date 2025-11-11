@@ -1,0 +1,98 @@
+{:skill
+ {:name "ert"
+  :version "1.0.0"
+  :description "Emacs Lisp Regression Testing (ERT) - Built-in testing framework for Emacs Lisp"
+  :tags [:testing :emacs-lisp :unit-testing :debugging :tdd :bdd]
+
+  :library
+  {:name "ert"
+   :version "Built-in (Emacs 24+)"
+   :url "https://www.gnu.org/software/emacs/manual/html_mono/ert.html"
+   :license "GPL-3.0-or-later"
+   :built-in true
+   :package-manager :none}
+
+  :features
+  ["Test definition with ert-deftest"
+   "Assertions: should, should-not, should-error"
+   "Interactive test execution and debugging"
+   "Batch mode for CI/CD integration"
+   "Test selectors (regex, tags, status)"
+   "Detailed failure reporting with subexpressions"
+   "Dynamic binding for easy mocking"
+   "Test organization with tags"
+   "Skip tests based on conditions"
+   "Backtrace inspection and debugging"
+   "No external dependencies"]
+
+  :use-cases
+  ["Unit testing Emacs Lisp packages"
+   "Regression testing for bug fixes"
+   "TDD/BDD development workflows"
+   "Integration testing for Emacs modes"
+   "CI/CD automated testing"
+   "Interactive debugging of test failures"
+   "Testing buffer manipulation functions"
+   "Testing interactive commands"
+   "Mocking external dependencies"
+   "Performance regression detection"]
+
+  :file-structure
+  {:main-docs "SKILL.md"
+   :quick-start "README.md"
+   :quick-reference "QUICK_REFERENCE.md"
+   :metadata "metadata.edn"}
+
+  :learning-path
+  {:beginner
+   ["Understanding ert-deftest syntax"
+    "Writing basic assertions with should"
+    "Running tests interactively with M-x ert"
+    "Reading test results"]
+
+   :intermediate
+   ["Using should-not and should-error"
+    "Organizing tests with tags"
+    "Working with temporary buffers"
+    "Test environment isolation with let"
+    "Cleanup with unwind-protect"
+    "Using test selectors"]
+
+   :advanced
+   ["Mocking functions with cl-letf and flet"
+    "Creating fixture functions with higher-order functions"
+    "Running tests in batch mode"
+    "Custom test listeners"
+    "Debugging test failures interactively"
+    "CI/CD integration"
+    "Testing asynchronous code"
+    "Custom assertion macros"]}
+
+  :platform
+  {:os [:unix :windows :macos]
+   :emacs-version "24.1+"}
+
+  :api-coverage
+  {:core-macros
+   ["ert-deftest"
+    "should"
+    "should-not"
+    "should-error"
+    "skip-unless"
+    "skip-when"]
+
+   :test-execution
+   ["ert"
+    "ert-run-tests-interactively"
+    "ert-run-tests-batch"
+    "ert-run-tests-batch-and-exit"
+    "ert-run-tests"]
+
+   :test-selection
+   ["Test selectors: t, regex, :tag, :failed, :passed"
+    "Selector combinators: and, or, not"]
+
+   :debugging
+   ["Interactive commands: . d b r R l m"
+    "ert-results buffer"
+    "Backtrace inspection"]}}}

@@ -1,0 +1,127 @@
+ERT (Emacs Lisp Regression Testing) - Built-in Testing Framework
+
+CORE CONCEPTS
+- Test definition: (ert-deftest name () [:tags (...)] body)
+- Assertions: should, should-not, should-error
+- Test selectors: t, "regex", :tag symbol, :failed, :passed
+- Interactive debugging with integrated backtrace inspection
+- Batch mode for CI/CD with exit codes
+
+KEY FUNCTIONS
+
+Test Definition:
+  (ert-deftest NAME () [:tags (TAG...)] BODY)
+  - Define test with optional tags for organization
+
+Assertions:
+  (should FORM) - Assert FORM is non-nil
+  (should-not FORM) - Assert FORM is nil
+  (should-error FORM [:type TYPE]) - Assert FORM signals error
+
+Running Tests:
+  M-x ert RET SELECTOR - Run tests interactively
+  (ert-run-tests-batch-and-exit) - Batch mode, exit with status
+  (ert-run-tests-batch) - Batch mode, no exit
+
+Skip Tests:
+  (skip-unless CONDITION) - Skip if CONDITION nil
+  (skip-when CONDITION) - Skip if CONDITION non-nil
+
+INTERACTIVE DEBUGGING (in *ert* buffer)
+  . - Jump to test definition
+  d - Re-run with debugger enabled
+  b - Show backtrace
+  r - Re-run test at point
+  R - Re-run all tests
+  l - Show executed should forms
+  m - Show test messages
+
+BEST PRACTICES
+
+Environment Isolation:
+  (with-temp-buffer ...) - Isolated buffer operations
+  (let ((var value)) ...) - Local variable binding
+  (unwind-protect (test-code) (cleanup)) - Ensure cleanup
+
+Mocking:
+  (cl-letf (((symbol-function 'fn) (lambda () "mock"))) ...)
+  (flet ((fn () "mock")) ...)
+
+Test Organization:
+  - Name: package-test-feature format
+  - Tags: :tags '(quick unit) or '(slow integration)
+  - Selectors: Run by tag, regex, or status
+
+Fixtures:
+  (defun with-fixture (body)
+    (let ((setup (do-setup)))
+      (unwind-protect (funcall body setup)
+        (do-teardown setup))))
+
+COMMON PATTERNS
+
+Test Errors:
+  (should-error (/ 1 0) :type 'arith-error)
+
+Test Buffer State:
+  (with-temp-buffer
+    (my-mode)
+    (should (eq major-mode 'my-mode)))
+
+Test Interactive Commands:
+  (with-temp-buffer
+    (insert "text")
+    (call-interactively 'my-cmd)
+    (should (= (point) expected)))
+
+BATCH MODE
+  emacs -batch -l ert -l tests.el -f ert-run-tests-batch-and-exit
+  emacs -batch -l ert -l tests.el \
+    --eval '(ert-run-tests-batch-and-exit "^test-prefix-")'
+  emacs -batch -l ert -l tests.el \
+    --eval '(let ((ert-quiet t)) (ert-run-tests-batch-and-exit))'
+
+CI/CD INTEGRATION
+  - Exit code 0 for success, non-zero for failure
+  - Use ert-run-tests-batch-and-exit for automated testing
+  - Set EMACS_TEST_VERBOSE for detailed failure output
+  - Test across multiple Emacs versions in matrix builds
+
+TEST FILE TEMPLATE
+  ;;; package-test.el --- Tests for package -*- lexical-binding: t -*-
+
+  (require 'ert)
+  (require 'package)
+
+  (ert-deftest package-test-feature ()
+    "Test feature implementation."
+    (should (package-function)))
+
+  (provide 'package-test)
+  ;;; package-test.el ends here
+
+KEY FEATURES
+- No external dependencies (built into Emacs 24+)
+- Interactive debugging with Emacs integration
+- Detailed failure reporting with subexpression values
+- Flexible test selection and organization
+- Dynamic binding enables easy mocking
+- Support for both unit and integration tests
+- Batch mode for automated testing
+- Test skipping based on conditions
+
+TYPICAL WORKFLOW
+1. Write test with ert-deftest
+2. Run interactively: M-x ert RET t RET
+3. Debug failures: press 'd' or 'b' on failed test
+4. Iterate until green
+5. Tag appropriately: :tags '(quick) or '(slow)
+6. Integrate into CI/CD with batch mode
+
+PITFALLS TO AVOID
+- Tests depending on global state
+- Missing cleanup (use unwind-protect)
+- Overly broad assertions (split into multiple should forms)
+- Not testing error cases
+- Tests interfering with each other
+- Relying on filesystem/network without mocking
