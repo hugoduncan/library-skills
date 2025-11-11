@@ -1,0 +1,11 @@
+{
+  "name": "emacs-libraries",
+  "description": "Skills for various Emacs libraries and packages",
+  "version": "1.0.0",
+  "author": {
+    "name": "Hugo Duncan",
+    "email": "hugo@hugoduncan.org"
+  },
+  "keywords": ["emacs", "elisp", "editor", "packages"],
+  "license": "EPL-2.0"
+}

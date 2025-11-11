@@ -22,6 +22,19 @@
       "category": "clojure",
       "tags": ["clojure", "babashka", "filesystem", "linting", "clj-kondo", "code-quality"],
       "strict": true
+    },
+    {
+      "name": "emacs-libraries",
+      "description": "Skills for various Emacs libraries and packages",
+      "version": "1.0.0",
+      "author": {
+        "name": "Hugo Duncan",
+        "email": "hugo@hugoduncan.org"
+      },
+      "source": "./plugins/emacs-libraries",
+      "category": "emacs",
+      "tags": ["emacs", "elisp", "editor", "packages"],
+      "strict": true
     }
   ]
 }
