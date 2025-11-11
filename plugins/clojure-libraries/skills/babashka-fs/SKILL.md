@@ -1,3 +1,8 @@
+---
+name: babashka.fs
+description: A guide to using babashka.fs.
+---
+
 # Babashka.fs File System Utilities Skill
 
 ## Overview
@@ -181,15 +186,15 @@ The library handles platform differences automatically, but provides utilities w
 (spit (fs/file "output.txt") "Hello, world!")
 
 ;; Write lines
-(fs/write-lines "output.txt" 
+(fs/write-lines "output.txt"
                 ["Line 1" "Line 2" "Line 3"])
-(fs/write-lines "output.txt" 
+(fs/write-lines "output.txt"
                 ["More lines"]
                 {:append true})                   ; Append mode
 
 ;; Write bytes
 (fs/write-bytes "output.bin" byte-array)
-(fs/write-bytes "output.bin" byte-array 
+(fs/write-bytes "output.bin" byte-array
                 {:append true})
 ```
 
@@ -198,7 +203,7 @@ The library handles platform differences automatically, but provides utilities w
 ```clojure
 ;; Copy files
 (fs/copy "source.txt" "dest.txt")                ; Copy file
-(fs/copy "source.txt" "dest.txt" 
+(fs/copy "source.txt" "dest.txt"
          {:replace-existing true})               ; Overwrite if exists
 
 ;; Copy entire directory trees
@@ -241,8 +246,8 @@ The library handles platform differences automatically, but provides utilities w
 
 ```clojure
 ;; Walk directory tree
-(fs/walk-file-tree "." 
-  {:visit-file (fn [path attrs] 
+(fs/walk-file-tree "."
+  {:visit-file (fn [path attrs]
                  (println "File:" path)
                  :continue)
    :pre-visit-dir (fn [path attrs]
@@ -324,7 +329,7 @@ For more complex matching, use `match`:
 ;; Find recently modified files
 (->> (fs/glob "." "**/*.clj")
      (filter #(> (fs/file-time->millis (fs/last-modified-time %))
-                 (- (System/currentTimeMillis) 
+                 (- (System/currentTimeMillis)
                     (* 24 60 60 1000))))          ; Last 24 hours
      (map str))
 
@@ -348,7 +353,7 @@ For more complex matching, use `match`:
 ;; Timestamps
 (fs/creation-time "file.txt")                    ; FileTime object
 (fs/last-modified-time "file.txt")               ; FileTime object
-(fs/set-last-modified-time "file.txt" 
+(fs/set-last-modified-time "file.txt"
                            (fs/file-time 1234567890000))
 
 ;; Convert FileTime to millis
@@ -364,7 +369,7 @@ For more complex matching, use `match`:
 
 ;; POSIX permissions (Unix/Linux)
 (fs/posix->str (fs/posix-file-permissions "file.txt"))  ; "rwxr-xr-x"
-(fs/set-posix-file-permissions "file.txt" 
+(fs/set-posix-file-permissions "file.txt"
                                (fs/str->posix "rwxr-xr-x"))
 
 ;; Check for modified files since anchor
@@ -376,8 +381,8 @@ For more complex matching, use `match`:
 ```clojure
 ;; Create zip archive
 (fs/zip "archive.zip" "file1.txt")               ; Single file
-(fs/zip "archive.zip" ["file1.txt" 
-                        "file2.txt" 
+(fs/zip "archive.zip" ["file1.txt"
+                        "file2.txt"
                         "dir"])                   ; Multiple files/dirs
 
 ;; Zip with options
@@ -453,7 +458,7 @@ For more complex matching, use `match`:
 ;; tmp-dir automatically deleted here
 
 ;; Pattern 2: Manual temp file management
-(let [tmp-file (fs/create-temp-file {:prefix "data-" 
+(let [tmp-file (fs/create-temp-file {:prefix "data-"
                                        :suffix ".json"})]
   (try
     (spit tmp-file (json/encode data))
@@ -503,7 +508,7 @@ For more complex matching, use `match`:
        (re-find #"\.(clj|cljs|cljc)$" (str path))))
 
 (defn recent? [days path]
-  (let [cutoff (- (System/currentTimeMillis) 
+  (let [cutoff (- (System/currentTimeMillis)
                   (* days 24 60 60 1000))]
     (> (fs/file-time->millis (fs/last-modified-time path)) cutoff)))
 
@@ -519,7 +524,7 @@ For more complex matching, use `match`:
 ```clojure
 ;; Write to temp file, then move (atomic on most filesystems)
 (let [target (fs/path "important-data.edn")
-      tmp-file (fs/create-temp-file {:prefix ".tmp-" 
+      tmp-file (fs/create-temp-file {:prefix ".tmp-"
                                        :suffix ".edn"
                                        :dir (fs/parent target)})]
   (try
@@ -560,7 +565,7 @@ For more complex matching, use `match`:
 
 (defn backup-directory [dir dest]
   (let [timestamp (System/currentTimeMillis)
-        backup-dir (fs/path dest (str (fs/file-name dir) 
+        backup-dir (fs/path dest (str (fs/file-name dir)
                                       "-" timestamp))]
     (fs/copy-tree dir backup-dir)))
 ```
@@ -572,8 +577,8 @@ For more complex matching, use `match`:
   (let [cutoff (- (System/currentTimeMillis)
                   (* max-age-days 24 60 60 1000))]
     (->> (fs/glob log-dir "*.log")
-         (filter #(< (fs/file-time->millis 
-                      (fs/last-modified-time %)) 
+         (filter #(< (fs/file-time->millis
+                      (fs/last-modified-time %))
                      cutoff))
          (run! fs/delete))))
 ```
@@ -695,15 +700,15 @@ For more complex matching, use `match`:
 ;; In bb.edn
 {:tasks
  {:requires ([babashka.fs :as fs])
-  
+
   clean {:doc "Remove build artifacts"
          :task (fs/delete-tree "target")}
-  
+
   test {:doc "Run tests"
         :task (do
                 (doseq [test-file (fs/glob "test" "**/*_test.clj")]
                   (load-file (str test-file))))}
-  
+
   build {:doc "Build project"
          :depends [clean]
          :task (do

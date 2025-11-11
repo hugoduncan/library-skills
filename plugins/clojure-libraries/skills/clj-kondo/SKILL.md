@@ -1,3 +1,8 @@
+---
+name: clj-kondo
+description: A guide to using clj-kondo for Clojure code linting, including configuration, built-in linters, and writing custom hooks.
+---
+
 # clj-kondo Skill Guide
 
 A comprehensive guide to using clj-kondo for Clojure code linting, including configuration, built-in linters, and writing custom hooks.
