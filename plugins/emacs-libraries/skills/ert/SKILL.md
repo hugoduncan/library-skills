@@ -1,3 +1,8 @@
+---
+name: ert
+description: A guide to using ERT (Emacs Lisp Regression Testing) for testing Emacs Lisp code.
+---
+
 # ERT: Emacs Lisp Regression Testing
 
 ERT is Emacs's built-in testing framework for automated testing of Emacs Lisp code. It provides facilities for defining tests, running them interactively or in batch mode, and debugging failures with integrated tooling.
