@@ -66,6 +66,7 @@ Default to clojure-libraries if unclear.
 
 4. **Generate SKILL.md**
    Structure:
+   - frontmatter with name and description fields
    - Overview and introduction
    - Core concepts
    - API reference organized by category
