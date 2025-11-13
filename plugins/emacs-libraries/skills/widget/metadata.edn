@@ -1,0 +1,73 @@
+{:name "widget"
+ :version "1.0.0"
+ :description "A guide to using the Emacs Widget Library for creating interactive UI elements in buffers."
+
+ :library {:name "wid-edit.el / widget.el"
+           :version "Built-in"
+           :url "https://www.gnu.org/software/emacs/manual/html_mono/widget.html"
+           :license "GPL-3.0-or-later"
+           :repository "https://github.com/emacs-mirror/emacs/blob/master/lisp/wid-edit.el"}
+
+ :tags [:emacs :ui :forms :widgets :interactive :buffer :interface]
+
+ :use-cases ["Custom configuration interfaces"
+             "Interactive forms and dialogs"
+             "Settings and preference editors"
+             "Data entry and validation"
+             "Multi-step wizards"
+             "Search and filter interfaces"]
+
+ :features ["Text input fields (single and multi-line)"
+            "Buttons and links"
+            "Checkboxes and radio buttons"
+            "Dropdown menus and checklists"
+            "Dynamic editable lists"
+            "Custom widget definitions"
+            "Value validation"
+            "Callback notifications"
+            "Keyboard navigation"]
+
+ :files {:skill "SKILL.md"
+         :readme "README.md"
+         :examples nil}
+
+ :learning-path [{:level "beginner"
+                  :topics ["Basic widget creation"
+                           "Buffer setup"
+                           "editable-field and push-button"
+                           "widget-setup requirement"]}
+                 {:level "intermediate"
+                  :topics ["Selection widgets"
+                           "Callbacks and notifications"
+                           "Value retrieval and setting"
+                           "Form validation"]}
+                 {:level "advanced"
+                  :topics ["Custom widget definitions"
+                           "Complex forms"
+                           "Major mode integration"
+                           "Performance optimization"]}]
+
+ :platform {:emacs "Built-in"
+            :dependencies ["widget.el" "wid-edit.el"]}
+
+ :api-coverage {:core ["widget-create"
+                       "widget-setup"
+                       "widget-value"
+                       "widget-value-set"
+                       "widget-insert"]
+                :navigation ["widget-forward"
+                             "widget-backward"]
+                :properties ["widget-get"
+                             "widget-put"
+                             "widget-apply"]
+                :lifecycle ["widget-delete"]
+                :types ["editable-field"
+                        "text"
+                        "push-button"
+                        "link"
+                        "checkbox"
+                        "toggle"
+                        "radio-button-choice"
+                        "menu-choice"
+                        "checklist"
+                        "editable-list"]}}
