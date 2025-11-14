@@ -1,0 +1,148 @@
+{:skill
+ {:name "magit-section"
+  :version "1.0.0"
+  :description "Build collapsible, hierarchical buffer UIs with sections - the foundation of Magit's interface"
+  :tags [:ui :navigation :buffers :interactive :hierarchy :magit :emacs-lisp]
+
+  :library
+  {:name "magit-section"
+   :version "4.2.0+"
+   :url "https://github.com/magit/magit"
+   :license "GPL-3.0-or-later"
+   :built-in false
+   :package-manager :nongnu-elpa}
+
+  :features
+  ["Hierarchical collapsible sections"
+   "Section-specific keymaps and actions"
+   "Built-in navigation commands"
+   "Visibility state caching across refreshes"
+   "Mouse and keyboard interaction"
+   "Integrated region selection"
+   "Deferred content loading for performance"
+   "Section matching and querying"
+   "Customizable visibility indicators"
+   "Context menu integration"
+   "Highlighting and visual feedback"
+   "EIEIO-based section objects"]
+
+  :use-cases
+  ["Building custom file browsers"
+   "Creating log viewers with collapsible entries"
+   "Process monitoring interfaces"
+   "Configuration inspectors"
+   "Package management UIs"
+   "Documentation browsers"
+   "Data explorers and viewers"
+   "Interactive command output"
+   "Project management interfaces"
+   "Custom Git interfaces (like Magit)"
+   "Database query result viewers"
+   "API response inspectors"]
+
+  :file-structure
+  {:main-docs "SKILL.md"
+   :quick-start "README.md"
+   :metadata "metadata.edn"}
+
+  :learning-path
+  {:beginner
+   ["Understanding section objects and hierarchy"
+    "Creating basic sections with magit-insert-section"
+    "Using magit-insert-heading"
+    "Basic navigation with n/p/^"
+    "Toggling visibility with TAB"
+    "Querying sections with magit-current-section"]
+
+   :intermediate
+   ["Section type matching with magit-section-match"
+    "Creating refreshable buffers"
+    "Using section-specific keymaps"
+    "Working with section values and data"
+    "Visibility control and cycling"
+    "Region selection of sections"
+    "Configuring visibility caching"]
+
+   :advanced
+   ["Washing external command output"
+    "Deferred content loading with magit-insert-section-body"
+    "Custom section classes with EIEIO"
+    "Visibility hooks and customization"
+    "Context menu integration"
+    "Performance optimization techniques"
+    "Complex hierarchical data structures"
+    "Dynamic section updates"]}
+
+  :platform
+  {:os [:unix :windows :macos]
+   :emacs-version "28.1+"}
+
+  :api-coverage
+  {:section-creation
+   ["magit-insert-section"
+    "magit-insert-heading"
+    "magit-insert-section-body"
+    "magit-cancel-section"
+    "magit-insert-child-count"]
+
+   :navigation
+   ["magit-section-forward"
+    "magit-section-backward"
+    "magit-section-up"
+    "magit-section-forward-sibling"
+    "magit-section-backward-sibling"
+    "magit-section-goto"]
+
+   :visibility
+   ["magit-section-toggle"
+    "magit-section-show"
+    "magit-section-hide"
+    "magit-section-cycle"
+    "magit-section-cycle-global"
+    "magit-section-show-children"
+    "magit-section-hide-children"
+    "magit-section-show-headings"
+    "magit-section-show-level-1 through 4"]
+
+   :querying
+   ["magit-current-section"
+    "magit-section-at"
+    "magit-section-ident"
+    "magit-section-match"
+    "magit-section-value-if"
+    "magit-section-lineage"
+    "magit-section-hidden"
+    "magit-section-content-p"
+    "magit-region-sections"]
+
+   :inspection
+   ["magit-describe-section"
+    "magit-describe-section-briefly"]
+
+   :section-object-slots
+   ["type"
+    "value"
+    "start"
+    "content"
+    "end"
+    "hidden"
+    "children"
+    "parent"
+    "keymap"
+    "washer"]
+
+   :configuration
+   ["magit-section-highlight-current"
+    "magit-section-highlight-selection"
+    "magit-section-show-child-count"
+    "magit-section-cache-visibility"
+    "magit-section-initial-visibility-alist"
+    "magit-section-visibility-indicators"
+    "magit-section-disable-line-numbers"]
+
+   :hooks
+   ["magit-section-movement-hook"
+    "magit-section-set-visibility-hook"
+    "magit-insert-section-hook"
+    "magit-menu-alternative-section-hook"
+    "magit-region-highlight-hook"]}}}
