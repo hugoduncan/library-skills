@@ -1,0 +1,41 @@
+{:name "babashka.cli"
+ :version "0.8.60"
+ :description "Command-line argument parsing for turning Clojure functions into CLIs"
+ :library {:name "org.babashka/cli"
+           :version "0.8.60"
+           :url "https://github.com/babashka/cli"
+           :license "MIT"}
+ :tags [:cli :command-line :parsing :arguments :babashka :clojure]
+ :use-cases [:cli-tools
+             :build-tools
+             :task-runners
+             :scripts
+             :subcommands
+             :configuration]
+ :features [:type-coercion
+            :subcommand-dispatch
+            :validation
+            :help-generation
+            :boolean-flags
+            :collection-handling
+            :positional-args
+            :error-handling
+            :alias-support
+            :default-values]
+ :file-structure {:SKILL.md "Comprehensive documentation with API reference"
+                  :README.md "Quick start guide"
+                  :metadata.edn "Skill metadata"
+                  :examples.clj "Runnable examples"}
+ :learning-path [{:level :beginner
+                  :topics [:parse-opts :basic-coercion :aliases]}
+                 {:level :intermediate
+                  :topics [:parse-args :validation :positional-args]}
+                 {:level :advanced
+                  :topics [:dispatch :subcommands :help-generation]}]
+ :platform-support {:babashka true
+                    :clojure true
+                    :clojurescript false}
+ :api-coverage {:parsing [:parse-opts :parse-args :parse-cmds]
+                :coercion [:auto-coerce :coerce :parse-keyword]
+                :dispatch [:dispatch :merge-opts]
+                :formatting [:format-opts :format-table :spec->opts]}}
