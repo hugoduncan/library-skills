@@ -23,6 +23,7 @@ Library Skills is a curated collection of library documentation packaged as Clau
   - `ert` - Emacs Lisp Regression Testing
   - `magit-section` - Collapsible hierarchical buffer UIs
   - `widget` - Interactive UI elements in buffers
+  - `package-conventions` - Emacs package development standards
 
 ## Installation
 
@@ -156,6 +157,21 @@ Use the emacs-libraries:widget skill
 - Building UI elements (buttons, fields, menus)
 - Custom configuration interfaces
 - User input dialogs
+
+#### package-conventions
+Emacs Lisp package development standards and conventions.
+
+**Invoke with:**
+```
+Use the emacs-libraries:package-conventions skill
+```
+
+**Use for:**
+- Creating new Emacs packages
+- MELPA submission guidelines
+- Package naming and structure conventions
+- Documentation and metadata standards
+- Code quality and testing
 
 ## Usage
 
