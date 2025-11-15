@@ -102,3 +102,7 @@ Default to clojure-libraries if unclear.
 - Include both beginner and advanced content
 - For Clojure libraries: Prioritize Babashka-compatible examples where possible
 - For Emacs libraries: Include keybindings, customization options, and integration patterns
+
+## README.md
+
+Update @README.md to mention the skill.
