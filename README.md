@@ -18,6 +18,7 @@ Library Skills is a curated collection of library documentation packaged as Clau
   - `babashka.fs` - File system operations
   - `clj-kondo` - Code linting and static analysis
   - `babashka-cli` - Command-line argument parsing
+  - `telemere` - Structured logging and telemetry
 
 - **emacs-libraries** - Emacs Lisp library skills
   - `ert` - Emacs Lisp Regression Testing
@@ -109,6 +110,22 @@ Use the clojure-libraries:babashka-cli skill
 - Parsing command-line arguments
 - Creating subcommands
 - Auto-generating help text
+
+#### telemere
+Structured logging and telemetry for Clojure/Script with tracing and performance monitoring.
+
+**Invoke with:**
+```
+Use the clojure-libraries:telemere skill
+```
+
+**Use for:**
+- Application logging and structured telemetry
+- Distributed tracing and request flow tracking
+- Performance monitoring and bottleneck identification
+- Error tracking with structured context
+- Observability and production monitoring
+- Debugging with trace and spy
 
 ### emacs-libraries
 

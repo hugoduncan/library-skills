@@ -1,0 +1,51 @@
+{:name "telemere"
+ :version "1.1.0"
+ :description "Structured logging and telemetry for Clojure/Script with tracing and performance monitoring"
+ :library {:name "com.taoensso/telemere"
+           :version "1.1.0"
+           :url "https://github.com/taoensso/telemere"
+           :license "EPL-1.0"}
+ :tags [:logging :telemetry :structured-logging :tracing :observability :monitoring :performance :clojure :clojurescript]
+ :use-cases [:application-logging
+             :structured-telemetry
+             :distributed-tracing
+             :performance-monitoring
+             :error-tracking
+             :debugging
+             :observability
+             :production-monitoring]
+ :features [:structured-data
+            :compile-time-elision
+            :runtime-filtering
+            :namespace-filtering
+            :level-based-filtering
+            :rate-limiting
+            :sampling
+            :async-handlers
+            :handler-middleware
+            :opentelemetry-integration
+            :slf4j-interop
+            :tools-logging-interop
+            :console-output
+            :json-output
+            :edn-output
+            :performance-benchmarking
+            :nested-tracing
+            :zero-config-defaults]
+ :file-structure {:SKILL.md "Comprehensive documentation with API reference"
+                  :metadata.edn "Skill metadata"
+                  :examples.clj "Runnable examples"}
+ :learning-path [{:level :beginner
+                  :topics [:log! :basic-signals :minimum-level :console-output]}
+                 {:level :intermediate
+                  :topics [:event! :trace! :spy! :filtering :handlers :data-attachment]}
+                 {:level :advanced
+                  :topics [:signal! :custom-handlers :middleware :rate-limiting :sampling :opentelemetry]}]
+ :platform-support {:babashka true
+                    :clojure true
+                    :clojurescript true}
+ :api-coverage {:signal-creation [:log! :event! :trace! :spy! :error! :catch->error! :signal!]
+                :configuration [:set-min-level! :set-ns-filter! :with-min-level :with-signal :with-signals]
+                :handlers [:add-handler! :remove-handler! :handler:console :handler:stream]
+                :filtering [:check-min-level :check-ns-filter]
+                :utilities [:check-interop :help:filters :help:handlers]}}
