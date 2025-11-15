@@ -1,0 +1,52 @@
+{:name "selmer"
+ :version "1.12.65"
+ :description "Django-inspired HTML templating system for Clojure with filters, tags, and template inheritance"
+ :library {:name "selmer/selmer"
+           :version "1.12.65"
+           :url "https://github.com/yogthos/Selmer"
+           :license "EPL-1.0"}
+ :tags [:templating :html :web :django :markup :rendering :filters :template-inheritance]
+ :use-cases [:web-applications
+             :html-generation
+             :email-templates
+             :report-generation
+             :static-site-generation
+             :dynamic-content-rendering
+             :template-based-output
+             :server-side-rendering]
+ :features [:variable-interpolation
+            :template-filters
+            :control-flow-tags
+            :template-inheritance
+            :template-includes
+            :custom-filters
+            :custom-tags
+            :template-caching
+            :auto-escaping
+            :nested-data-access
+            :filter-chaining
+            :django-compatible-syntax
+            :error-reporting
+            :validation
+            :custom-markers
+            :middleware-support]
+ :file-structure {:SKILL.md "Comprehensive documentation with API reference and examples"
+                  :metadata.edn "Skill metadata"
+                  :examples.clj "Runnable examples"}
+ :learning-path [{:level :beginner
+                  :topics [:render :render-file :variables :basic-filters :if-tags :for-loops]}
+                 {:level :intermediate
+                  :topics [:template-inheritance :includes :blocks :filter-chaining :resource-paths :caching]}
+                 {:level :advanced
+                  :topics [:custom-filters :custom-tags :validation :error-handling :middleware :escaping-control]}]
+ :platform-support {:babashka false
+                    :clojure true
+                    :clojurescript false}
+ :api-coverage {:rendering [:render :render-file]
+                :caching [:cache-on! :cache-off!]
+                :configuration [:set-resource-path! :set-missing-value-formatter!]
+                :introspection [:known-variables]
+                :validation [:validate-on! :validate-off!]
+                :customization [:add-filter! :add-tag! :remove-filter! :remove-tag!]
+                :error-handling [:wrap-error-page]
+                :utilities [:without-escaping]}}
