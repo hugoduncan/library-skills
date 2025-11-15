@@ -19,6 +19,7 @@ Library Skills is a curated collection of library documentation packaged as Clau
   - `clj-kondo` - Code linting and static analysis
   - `babashka-cli` - Command-line argument parsing
   - `telemere` - Structured logging and telemetry
+  - `selmer` - Django-inspired HTML templating
 
 - **emacs-libraries** - Emacs Lisp library skills
   - `ert` - Emacs Lisp Regression Testing
@@ -126,6 +127,22 @@ Use the clojure-libraries:telemere skill
 - Error tracking with structured context
 - Observability and production monitoring
 - Debugging with trace and spy
+
+#### selmer
+Django-inspired HTML templating system for Clojure.
+
+**Invoke with:**
+```
+Use the clojure-libraries:selmer skill
+```
+
+**Use for:**
+- Web application HTML generation
+- Email template rendering
+- Server-side rendering
+- Report generation with templates
+- Dynamic content with filters and tags
+- Template-based text output
 
 ### emacs-libraries
 
