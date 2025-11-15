@@ -1,0 +1,82 @@
+{:skill
+ {:name "timbre"
+  :version "1.0.0"
+  :description "Pure Clojure/Script logging library with flexible configuration and powerful features"
+  :tags [:logging :clojure :clojurescript :appenders :async :middleware]
+  :use-cases
+  ["Application logging with structured data"
+   "Error tracking and exception handling"
+   "Performance monitoring and profiling"
+   "Multi-destination log routing"
+   "Development and production logging"
+   "Request/response logging"
+   "Database query logging"
+   "Conditional and rate-limited logging"]
+  :key-features
+  ["Zero-dependency pure Clojure/Script implementation"
+   "Simple configuration with Clojure data structures"
+   "Compile-time log level and namespace elision"
+   "Async logging with configurable appenders"
+   "Rate limiting per appender or log call"
+   "Flexible middleware pipeline"
+   "Context/MDC support for structured logging"
+   "Built-in and extensible appenders"
+   "tools.logging and SLF4J interoperability"
+   "Printf-style and structured logging"]}
+
+ :library
+ {:name "com.taoensso/timbre"
+  :version "6.8.0"
+  :url "https://github.com/taoensso/timbre"
+  :documentation-url "https://taoensso.github.io/timbre/"
+  :license "EPL-1.0"
+  :platforms [:clojure :clojurescript]
+  :notes "For new projects, consider Telemere - a modern rewrite of Timbre"}
+
+ :file-structure
+ {:skill-md "Comprehensive API reference and usage patterns"
+  :examples-clj "Runnable Babashka examples demonstrating core features"
+  :metadata-edn "Skill metadata and library information"}
+
+ :learning-path
+ {:beginner
+  ["Basic logging at different levels"
+   "Simple configuration setup"
+   "Using built-in appenders"
+   "Exception logging"]
+  :intermediate
+  ["Custom appenders"
+   "Middleware functions"
+   "Context/MDC usage"
+   "Rate limiting and async logging"
+   "Namespace filtering"]
+  :advanced
+  ["Custom output formatting"
+   "Complex appender configurations"
+   "Performance optimization"
+   "Multi-environment setup"
+   "Integration with other logging systems"]}
+
+ :api-coverage
+ {:logging-functions
+  ["trace" "debug" "info" "warn" "error" "fatal" "report"
+   "tracef" "debugf" "infof" "warnf" "errorf" "fatalf" "reportf"
+   "log" "logf" "spy" "sometimes"]
+  :configuration
+  ["set-config!" "merge-config!" "swap-config!"
+   "with-config" "with-merged-config"
+   "set-min-level!" "set-ns-min-level!"
+   "with-min-level"]
+  :context
+  ["with-context" "with-context+"]
+  :utilities
+  ["log-errors" "log-and-rethrow-errors"
+   "logged-future" "handle-uncaught-jvm-exceptions!"
+   "shutdown-appenders!"]
+  :appenders
+  ["println-appender" "spit-appender"]
+  :output
+  ["default-output-fn" "default-output-msg-fn"
+   "color-str" "ansi-color"]
+  :interop
+  ["use-timbre" "refer-timbre"]}}

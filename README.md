@@ -20,6 +20,7 @@ Library Skills is a curated collection of library documentation packaged as Clau
   - `babashka-cli` - Command-line argument parsing
   - `telemere` - Structured logging and telemetry
   - `selmer` - Django-inspired HTML templating
+  - `timbre` - Pure Clojure/Script logging library
 
 - **emacs-libraries** - Emacs Lisp library skills
   - `ert` - Emacs Lisp Regression Testing
@@ -143,6 +144,22 @@ Use the clojure-libraries:selmer skill
 - Report generation with templates
 - Dynamic content with filters and tags
 - Template-based text output
+
+#### timbre
+Pure Clojure/Script logging library with flexible configuration and powerful features.
+
+**Invoke with:**
+```
+Use the clojure-libraries:timbre skill
+```
+
+**Use for:**
+- Application logging with simple configuration
+- Multi-destination log routing with appenders
+- Async logging and rate limiting
+- Exception handling and error tracking
+- Development and production logging
+- tools.logging and SLF4J integration
 
 ### emacs-libraries
 
