@@ -21,6 +21,7 @@ Library Skills is a curated collection of library documentation packaged as Clau
   - `telemere` - Structured logging and telemetry
   - `selmer` - Django-inspired HTML templating
   - `timbre` - Pure Clojure/Script logging library
+  - `clay` - Data visualization and literate programming
 
 - **emacs-libraries** - Emacs Lisp library skills
   - `ert` - Emacs Lisp Regression Testing
@@ -160,6 +161,22 @@ Use the clojure-libraries:timbre skill
 - Exception handling and error tracking
 - Development and production logging
 - tools.logging and SLF4J integration
+
+#### clay
+REPL-friendly data visualization and literate programming with Kindly convention.
+
+**Invoke with:**
+```
+Use the clojure-libraries:clay skill
+```
+
+**Use for:**
+- Data visualization with Vega-Lite, Plotly, ECharts
+- Literate programming notebooks
+- Interactive data exploration
+- Documentation generation
+- Quarto publishing integration
+- Scientific reports and slideshows
 
 ### emacs-libraries
 

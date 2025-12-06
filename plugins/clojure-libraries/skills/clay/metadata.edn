@@ -1,0 +1,50 @@
+{:name "clay"
+ :version "1.0.0"
+ :description "REPL-friendly data visualization and literate programming for Clojure with Kindly convention"
+ :library {:name "org.scicloj/clay"
+           :version "2.0.3"
+           :url "https://github.com/scicloj/clay"
+           :license "EPL-1.0"}
+ :tags [:visualization :notebooks :literate-programming :data-science :quarto
+        :html :markdown :vega-lite :plotly :clojure :repl]
+ :use-cases [:data-visualization
+             :notebook-development
+             :literate-programming
+             :documentation-generation
+             :interactive-reports
+             :data-exploration
+             :scientific-publishing
+             :slideshows]
+ :features [:kindly-convention
+            :quarto-integration
+            :live-reload
+            :editor-integration
+            :multiple-output-formats
+            :vega-lite-charts
+            :plotly-charts
+            :echarts-visualization
+            :hiccup-html
+            :markdown-rendering
+            :dataset-tables
+            :reagent-components
+            :code-hiding
+            :namespace-rendering
+            :file-watching]
+ :file-structure {:SKILL.md "Comprehensive documentation with API reference"
+                  :metadata.edn "Skill metadata"
+                  :examples.clj "Runnable examples"}
+ :learning-path [{:level :beginner
+                  :topics [:make! :basic-visualization :kind/hiccup :kind/md]}
+                 {:level :intermediate
+                  :topics [:kind/table :kind/vega-lite :configuration :quarto]}
+                 {:level :advanced
+                  :topics [:reagent :custom-deps :file-watching :editor-integration]}]
+ :platform-support {:babashka false
+                    :clojure true
+                    :clojurescript false}
+ :api-coverage {:core [:make! :browse!]
+                :kinds [:kind/hiccup :kind/md :kind/table :kind/vega-lite
+                        :kind/plotly :kind/echarts :kind/image :kind/dataset
+                        :kind/code :kind/fragment :kind/reagent :kind/hidden]
+                :configuration [:source-path :format :show :browse :quarto
+                                :base-target-path :title :favicon]}}
