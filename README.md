@@ -16,6 +16,7 @@ Library Skills is a curated collection of library documentation packaged as Clau
 
 - **clojure-libraries** - Clojure and Babashka library skills
   - `babashka.fs` - File system operations
+  - `babashka.process` - Subprocess spawning and shell operations
   - `clj-kondo` - Code linting and static analysis
   - `babashka-cli` - Command-line argument parsing
   - `telemere` - Structured logging and telemetry
@@ -84,6 +85,22 @@ Use the clojure-libraries:babashka.fs skill
 - File searching and globbing
 - Cross-platform file system tasks
 - Build scripts and automation
+
+#### babashka.process
+Subprocess spawning and shell operations for Clojure and Babashka.
+
+**Invoke with:**
+```
+Use the clojure-libraries:babashka.process skill
+```
+
+**Use for:**
+- Running external commands
+- Shell scripting in Clojure
+- Process pipelines
+- Streaming process output
+- Build automation
+- System administration scripts
 
 #### clj-kondo
 Code linting and static analysis for Clojure.
