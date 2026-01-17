@@ -293,6 +293,23 @@ Create process builders for pipelines.
     deref :out)
 ```
 
+### Close Stdin
+
+For processes that read stdin until EOF, close it immediately:
+
+```clojure
+;; Empty string - simplest approach
+(process {:in ""} "cmd")
+
+;; Null device
+(process {:in null-file} "cmd")
+
+;; Explicit close after start
+(let [p (process "cmd")]
+  (.close (:in p))
+  p)
+```
+
 ### Streaming Output
 
 ```clojure
